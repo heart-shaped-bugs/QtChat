@@ -19,7 +19,6 @@ bool ChatDatabase::open(QString *errorMessage)
     QString connName = QStringLiteral("mysql_%1").arg(QUuid::createUuid().toString(QUuid::WithoutBraces));
     m_database = QSqlDatabase::addDatabase("QMYSQL", connName);
 
-    // ВАЖНО: используем 127.0.0.1 вместо localhost, чтобы принудительно задействовать TCP/IP
     m_database.setHostName("127.0.0.1");
     m_database.setPort(3306);
     m_database.setDatabaseName("chat_db");
