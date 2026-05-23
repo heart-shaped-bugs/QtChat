@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>UDP Чат</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="topPanel">
+      <item>
+       <widget class="QLabel" name="labelLocalPort">
+        <property name="text"><string>Локальный порт</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="localPortEdit">
+        <property name="text"><string>5000</string></property>
+        <property name="maximumWidth"><number>100</number></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startButton">
+        <property name="text"><string>Начать прослушивание</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelRemoteHost">
+        <property name="text"><string>Удалённый хост</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="remoteHostEdit">
+        <property name="text"><string>127.0.0.1</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelRemotePort">
+        <property name="text"><string>Порт</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="remotePortEdit">
+        <property name="text"><string>5000</string></property>
+        <property name="maximumWidth"><number>80</number></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="setRemoteButton">
+        <property name="text"><string>Установить удалённый</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="chatHistoryEdit">
+      <property name="readOnly"><bool>true</bool></property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="sendLayout">
+      <item>
+       <widget class="QLineEdit" name="messageEdit">
+        <property name="placeholderText"><string>Сообщение...</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="sendButton">
+        <property name="text"><string>Отправить</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableView" name="logView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
